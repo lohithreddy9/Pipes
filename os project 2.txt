@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	
+	float PFST=8000000,MPFST=20000000,MMAT=100,EAT=200,PFR;
+	
+	printf("PFST=Page fault (not modified) \nMPFST=Page Fault(modified) \nMMAT=Memory Access time \nEAT=Effective access time \nPFR=Page fault rate\n");
+	
+	printf("The actual formula is : EAT=PFR*((modified percentage of PFST)+(1-modified)percentage*MPFST))+(1-PFR)*MMAT)");
+	
+	PFR=(EAT-MMAT)/((0.7*MPFST)+(0.3*PFST));
+	
+	printf("\nThe PAGE FAULT RATE in 'nano seconds' is %f",PFR);	
+}
